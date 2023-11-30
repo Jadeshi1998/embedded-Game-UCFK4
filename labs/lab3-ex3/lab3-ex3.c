@@ -10,6 +10,7 @@
 #define MESSAGE_RATE 10
 
 
+
 void display_character (char character)
 {
     char buffer[2];
@@ -30,7 +31,7 @@ int main (void)
     navswitch_init ();
 
     /* TODO: Initialise IR driver.  */
-
+    ir_uart_init ();
 
     pacer_init (PACER_RATE);
 
@@ -46,9 +47,14 @@ int main (void)
         if (navswitch_push_event_p (NAVSWITCH_SOUTH))
             character--;
 
-        /* TODO: Transmit the character over IR on a NAVSWITCH_PUSH
-           event.  */
-        
+        /* Transmit the character over IR on a NAVSWITCH_PUSH event.  */
+        if (navswitch_push_event_p (NAVSWITCH_PUSH))
+            ir_uart_putc (character);
+
+        /*IR Event when recive an character*/
+        if (ir_uart_read_ready_p ())
+            character = ir_uart_getc ();   
+            
         display_character (character);
         
     }

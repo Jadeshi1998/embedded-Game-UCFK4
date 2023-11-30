@@ -16,7 +16,7 @@ void pacer_init (pacer_rate_t pacer_rate)
 {
     timer_init ();
 
-    pacer_period = TIMER_RATE / pacer_rate;
+    pacer_period_ticks = TIMER_RATE / pacer_rate;
 }
 
 

@@ -1,6 +1,3 @@
-#include "pio.h"
-#include "system.h"
-
 /** @file   ledmat.c
     @author M. P. Hayes, UCECE
     @date   23 August 2010
@@ -65,23 +62,17 @@ void ledmat_display_column (uint8_t pattern, uint8_t col)
     for (row = 0; row < LEDMAT_ROWS_NUM; row++)
     {
         /* The rows are active low.  */
-        if (pattern & 1) {
+        if (pattern & 1)
             pio_output_low (ledmat_rows[row]);
-        } else {
+        else
             pio_output_high (ledmat_rows[row]);
-        }
+
         pattern >>= 1;
     }
+
     /* Enable new column.  */
     pio_output_low (ledmat_cols[col]);
     col_prev = col;
 }
 
 
-
-int main (void)
-{
-    ledmat_init ();
-    ledmat_display_column(0x4d,2);
-    return 0;
-}

@@ -8,6 +8,8 @@ void led_on (void);
 /** Turn LED1 off.  */
 void led_off (void);
 
+/** Toggle LED1*/
+void toggle (void);
 
 /** Initialise LED1.  */
 void led_init (void);

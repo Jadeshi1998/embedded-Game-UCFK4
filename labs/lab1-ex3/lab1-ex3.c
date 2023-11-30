@@ -6,7 +6,6 @@
 int main (void)
 {
     system_init ();
-
     led_init ();
     button_init ();
 
