@@ -7,7 +7,7 @@
 #include "timer.h"
 #include "pacer.h"
 
-static timer_tick_t pacer_period;
+static timer_tick_t pacer_period_ticks;  /* Number of ticks of the timer for the given pacer frequency */
 
 
 /** Initialise pacer:
@@ -26,5 +26,5 @@ void pacer_wait (void)
     static timer_tick_t when = 0;
 
     timer_wait_until (when);
-    when += pacer_period;
+    when += pacer_period_ticks;
 }
