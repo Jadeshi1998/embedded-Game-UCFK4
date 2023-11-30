@@ -1,7 +1,7 @@
 #include <avr/io.h>
 #include "pacer.h"
 
-static uint16_t pacer_period;
+static uint16_t pacer_period_ticks;  /* Number of ticks of the timer for the given pacer frequency */
 
 /* Initialise the pacer module.  */
 void pacer_init (uint16_t pacer_frequency)
