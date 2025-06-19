@@ -1,10 +1,7 @@
-# ENCE260 Embedded Systems: Snake Game
+# Embedded Systems: Snake Game
 
 ## Overview
 This project is a two-player version of the classic game *Snake*, developed as part of the ENCE260 Embedded Programming course for Semester 2, 2024. The game is built for the UCFK4 microcontroller boards and demonstrates key concepts of embedded systems programming, including modular C design, hardware abstraction using APIs, and inter-board communication using IR.
-
-**Due Date**: Week 6 of Term 4, 2024  
-**Group**: 214
 
 ## Group Members
 - **Auron Walker**
