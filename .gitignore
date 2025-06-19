@@ -5,6 +5,10 @@
 .#*
 \#*
 
+# macOS Finder metadata
+.DS_Store
+
+
 # Compiled Python files.
 *.pyc
 *.pyo
