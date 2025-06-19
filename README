@@ -1,5 +1,6 @@
 
 The directory structure is:
+assignment   --- Key code for snake game
 apps         --- contains a sub-directory for each application
 drivers      --- device driver modules (hardware independent)
 drivers/avr  --- device driver modules specifically for AVR architecture
