@@ -44,7 +44,7 @@ void task_schedule (task_t *tasks, uint8_t num_tasks)
         next_task->reschedule += next_task->period;
 
         sleep_min = ~0;
-        now = timer_get ();
+        now = timer_get (); 
 
         /* Search array of tasks.  Schedule the first task (highest priority)
            that needs to run otherwise wait until first task ready.  */
